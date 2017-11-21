@@ -1,0 +1,24 @@
+{
+  "entrypoint": "index.html",
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "scripts/**/*",
+    "styles/**/*"
+  ],
+  "extraDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/*.js"
+  ],
+  "builds": [
+    {
+      "preset": "es5-bundled"
+    },
+    {
+      "preset": "es6-bundled"
+    },
+    {
+      "preset": "es6-unbundled"
+    }
+  ]
+}

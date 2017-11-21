@@ -1,0 +1,62 @@
+<dom-module id="mill-item-announcement">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div style="background: #fff; padding: 14px;border: 1px solid #eee; border-bottom: 2px solid #ddd; margin-bottom: 20px;">
+      <a href="http://themill.church{{announcement.fullUrl}}" target="_blank" style="width:100%;"><img src="{{announcement.assetUrl}}?format=500w" style="width: 100%"/></a>
+      <h2 style="margin: 0; padding: 14px 0 0 0;">{{announcement.title}}</h2>
+      <table>
+        <tr>
+          <td valign="top" style="padding: 0px;">
+            <p>{{_computeExcerpt(announcement.excerpt)}}</p>
+            <a href="http://themill.church{{announcement.fullUrl}}" target="_blank" style="background: #728417; color: #fff; padding: 10px 16px; border-radius: 6px; display: inline-block; text-decoration: none;">Read More</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: 'mill-item-announcement',
+      properties: {
+        announcement: {
+          type: Object,
+        }
+      },
+      _computeExcerpt: function(html) {
+        var div = document.createElement('div');
+        div.innerHTML = html;
+        var text = div.textContent || div.innerText || '';
+        return text;
+      },
+      _computeDateMonth: function(item) {
+        var date = new Date(item);
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return months[date.getMonth()];
+      },
+      _computeDateDay: function(item) {
+        var date = new Date(item);
+        return date.getDate();
+      },
+      _computeDateHours: function(item) {
+        var d = new Date(item);
+        var minutes = d.getMinutes().toString().length === 1 ? '0' + d.getMinutes() : d.getMinutes();
+        var hours = d.getHours().toString().length === 1 ? '0' + d.getHours() : d.getHours();
+        var ampm = d.getHours() >= 12 ? 'p' : 'a';
+        if (hours > 12) {
+          hours = hours - 12;
+        }
+        if (typeof hours === 'string') {
+          while (hours.charAt(0) === '0') {
+            hours = hours.substr(1);
+          }
+        }
+        return hours + ':' + minutes + ampm;
+      }
+    });
+  </script>
+
+</dom-module>
