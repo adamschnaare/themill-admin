@@ -120,6 +120,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         border: 1px solid #eee;
         border-bottom: 2px solid #ddd;
         font-family: 'Roboto', sans-serif;
+        max-width: 800px;
       }
       .section-header{
         padding: 10px 14px;
@@ -183,10 +184,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         background: #e0e0e0;
         width: 140px;
         height: 140px;
-        position: absolute;
+        display: inline-block;
         overflow: hidden;
         left: 0;
-        display: block;
+        vertical-align: top;
+        float: left;
       }
       .announcement .image img{
         height: 100%;
@@ -196,8 +198,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       }
       .announcement .content{
-        margin-left: 160px;
-        padding-right: 14px;
+        padding-left: 160px;
+        padding-right: 14px
       }
       .announcement .subtitle{
         font-size: 12px;
@@ -213,21 +215,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         width: 44px;
       }
       .announcement.small .content{
-        margin-left: 60px;
+        padding-left: 60px;
       }
       .announcement.small .content h3{
         padding: 0;
         font-size: 16px;
         line-height: 44px;
-        margin-right: 110px;
       }
       .announcement.small .subtitle{
-        position: absolute;
-        right: 14px;
-        top: 0;
         line-height: 44px;
         padding: 0;
         margin: 0;
+        margin-right: 14px;
+        vertical-align: center;
       }
       .button {
         color: #4caf50;
@@ -236,8 +236,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         display: inline-block;
         font-size: 14px;
         text-decoration: none;
-        position: absolute;
-        bottom: 14px;
+        margin-top: 14px;
         font-family: 'Roboto', sans-serif;
       }
       .button:hover{
@@ -246,6 +245,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .card-list{
         border: 1px solid #eee;
         border-bottom: 2px solid #ddd;
+        max-width: 800px;
       }
       .card-list .announcement{
         margin-bottom: 0;
@@ -355,6 +355,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               border: 1px solid #eee;
               border-bottom: 2px solid #ddd;
               font-family: 'Roboto', sans-serif;
+              max-width: 800px;
             }
             .section-header{
               padding: 10px 14px;
@@ -418,10 +419,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               background: #e0e0e0;
               width: 140px;
               height: 140px;
-              position: absolute;
+              display: inline-block;
               overflow: hidden;
               left: 0;
-              display: block;
+              vertical-align: top;
+              float: left;
             }
             .announcement .image img{
               height: 100%;
@@ -431,8 +433,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               text-align: center;
             }
             .announcement .content{
-              margin-left: 160px;
-              padding-right: 14px;
+              padding-left: 160px;
+              padding-right: 14px
             }
             .announcement .subtitle{
               font-size: 12px;
@@ -448,21 +450,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               width: 44px;
             }
             .announcement.small .content{
-              margin-left: 60px;
+              padding-left: 60px;
             }
             .announcement.small .content h3{
               padding: 0;
               font-size: 16px;
               line-height: 44px;
-              margin-right: 110px;
             }
             .announcement.small .subtitle{
-              position: absolute;
-              right: 14px;
-              top: 0;
               line-height: 44px;
               padding: 0;
               margin: 0;
+              margin-right: 14px;
+              vertical-align: center;
             }
             .button {
               color: #4caf50;
@@ -471,8 +471,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               display: inline-block;
               font-size: 14px;
               text-decoration: none;
-              position: absolute;
-              bottom: 14px;
+              margin-top: 14px;
               font-family: 'Roboto', sans-serif;
             }
             .button:hover{
@@ -481,6 +480,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             .card-list{
               border: 1px solid #eee;
               border-bottom: 2px solid #ddd;
+              max-width: 800px;
             }
             .card-list .announcement{
               margin-bottom: 0;
@@ -554,8 +554,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <a href="https://themill.church{{item.fullUrl}}" target="_blank" class="announcement small link">
                   <div class="image"><img src="{{item.assetUrl}}?format=500w" /></div>
                   <div class="content">
-                    <h3>{{item.title}}</h3>
-                    <p class="subtitle">{{_computeDateMonth(item.startDate)}} {{_computeDateDay(item.startDate)}} @ {{_computeDateHours(item.startDate)}}</p>
+                    <h3><span class="subtitle">{{_computeDateMonth(item.startDate)}} {{_computeDateDay(item.startDate)}} @ {{_computeDateHours(item.startDate)}}</span>{{item.title}}</h3>
                   </div>
                 </a>
               </template>
