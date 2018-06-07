@@ -98,7 +98,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-overflow: ellipsis;
       }
       h3 {
-        margin: 0;
+        margin-top: 0;
         padding: 14px 0 0 0;
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
@@ -333,7 +333,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               text-overflow: ellipsis;
             }
             h3 {
-              margin: 0;
+              margin-top: 0;
               padding: 14px 0 0 0;
               font-family: 'Roboto', sans-serif;
               font-weight: 400;
@@ -507,9 +507,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <a href="https://themill.church{{item.fullUrl}}" target="_blank" class="image"><img src="{{item.assetUrl}}?format=500w" /></a>
                   <div class="content">
                     <h3>{{item.title}}</h3>
-                    <p class="subtitle">
-                      {{_computeDateMonth(item.publishOn)}} {{_computeDateDay(item.publishOn)}}
-                    </p>
                     <p class="excerpt">{{_computeExcerpt(item.excerpt)}}</p>
                     <a href="https://themill.church{{item.fullUrl}}" target="_blank" class="button">Read More</a>
                   </div>
