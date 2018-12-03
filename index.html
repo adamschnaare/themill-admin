@@ -91,6 +91,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="src/mill-item-stdate.html">
     <link rel="import" href="src/app-nav.html">
     <link rel="import" href="bower_components/ship-squarespace-slides/ship-squarespace-slides.html">
+    <script src="bower_components/moment/moment.js" charset="utf-8"></script>
 
     <!-- endreplace-->
 
@@ -186,10 +187,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   route="{{headerRoute}}"></mill-view-announcements>
               </section>
               <section data-route="edgarEvents">
-                <ship-squarespace-slides url="https://themill.church/events" categories="All Church,Edgar"></ship-squarespace-slides>
+                <ship-squarespace-slides events-url="https://themill.church/events" events-categories="All Church,Edgar" announcements-url="https://themill.church/announcements"></ship-squarespace-slides>
               </section>
               <section data-route="stratfordEvents">
-                <ship-squarespace-slides url="https://themill.church/events" categories="All Church,Stratford"></ship-squarespace-slides>
+                <ship-squarespace-slides events-url="https://themill.church/events" events-categories="All Church,Stratford" announcements-url="https://themill.church/announcements"></ship-squarespace-slides>
               </section>
 
             </iron-pages>
