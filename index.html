@@ -52,6 +52,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script>
+      String.prototype.replaceAll = function(search, replacement) {
+      var target = this;
+      return target.replace(new RegExp(search, 'g'), replacement);
+      };
+    </script>
     <!-- endbuild -->
 
     <!-- will be replaced with elements/elements.vulcanized.html -->
